@@ -14,28 +14,17 @@ var imagemin = require("gulp-imagemin");
 var server = require("browser-sync");
 var run = require("run-sequence");
 var del = require("del");
-var jade = require("gulp-jade");
 
 gulp.task("build", function(fn) {
   run(
     "clean",
     "copy",
-    "html",
     "style",
     "images",
     "symbols",
     fn
   );
 });
-
-gulp.task("html", function() {
-  gulp.src("jade/index.jade")
-  .pipe(plumber())
-  .pipe(jade())
-  .pipe(rename("index-ru.html"))
-  .pipe(gulp.dest("."))
-  .pipe(server.reload({stream: true}));
-})
 
 gulp.task("style", function() {
   gulp.src("less/style.less")
@@ -55,13 +44,13 @@ gulp.task("style", function() {
     ]))
     .pipe(gulp.dest("css"))
     .pipe(minify())
-    .pipe(rename("style.css"))
+    .pipe(rename("style.min.css"))
     .pipe(gulp.dest("css"))
     .pipe(server.reload({stream: true}));
 });
 
 gulp.task("images", function() {
-  return gulp.src("build/img/**/*.{png,jpg,gif}")
+  return gulp.src("dist/img/**/*.{png,jpg,gif}")
   .pipe(imagemin([
     imagemin.optipng({
       optimizationLevel: 3
@@ -70,17 +59,17 @@ gulp.task("images", function() {
       progressive: true
     })
   ]))
-  .pipe(gulp.dest("build/img"));
+  .pipe(gulp.dest("dist/img"));
 });
 
 gulp.task("symbols", function() {
-  return gulp.src("build/img/icons/*.svg")
+  return gulp.src("dist/img/icons/*.svg")
   	.pipe(svgmin())
     .pipe(svgstore({
       inlineSvg: true
     }))
     .pipe(rename("symbols.svg"))
-    .pipe(gulp.dest("build/img"));
+    .pipe(gulp.dest("dist/img"));
 });
 
 gulp.task("serve", function() {
@@ -91,23 +80,23 @@ gulp.task("serve", function() {
 		ui: false
 	});
 
-  gulp.watch("less/**/*.less", ["style"]);
-  gulp.watch("jade/**/*.jade", ["html"]);
+  gulp.watch("stylus/**/*.styl", ["style"]);
   gulp.watch("*.html").on("change", server.reload);
 });
 
 gulp.task("copy", function() {
 	return gulp.src([
 		"fonts/**/*.{woff,woff2}",
+    "css/**",
 		"img/**",
 		"js/**",
 		"*.html"
 	], {
-		base: "."
+		base: "app"
 	})
-	.pipe(gulp.dest("build"))
+	.pipe(gulp.dest("../dist"))
 });
 
 gulp.task("clean", function() {
-  return del("build");
+  return del("dist");
 });

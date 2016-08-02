@@ -1,12 +1,12 @@
 {
-  "name": "CV",
+  "name": "MBA",
   "version": "0.1.0",
   "private": true,
   "description": "",
   "author": "Sergei Kutsev",
   "repository": {
     "type": "git",
-    "url": "git@github.com:flaum/CV.git"
+    "url": "git@github.com:flaum/MBA-test.git"
   },
   "homepage": "",
   "devDependencies": {
