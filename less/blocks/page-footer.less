@@ -1,0 +1,306 @@
+.page-footer {
+	.container-adaptive();
+
+}
+
+.page-footer__list-wrapper {
+	position: relative;
+}
+
+.page-footer__list {
+	margin: 0;
+	padding: 0;
+	padding-right: 24.63%;
+	padding-left: 24.63%;
+
+	list-style: none;
+	background: @little-blue-gray url("../img/map-background.png") no-repeat 50% top;
+}
+
+.page-footer__item {
+	padding: 0;
+	padding-top: 15px;
+
+	&--nav {
+		padding-top: 13px;
+	}
+
+	&--news {
+		padding-right: 34px;
+		padding-bottom: 24px;
+		padding-left: 35px;
+
+		.page-footer__item-title {
+			padding-bottom: 0;
+		}
+	}
+
+	&--moscow-office {
+		position: relative;
+		padding-left: 34px;
+
+		&::before {
+			content: "";
+
+			position: absolute;
+			top: 18px;
+			right: 0px;
+
+			display: block;
+
+			width: 1px;
+			height: 98px;
+
+			background: @quartz;
+		}
+	}
+
+	&--kiev-office {
+		padding-left: 29px;
+	}
+}
+
+.page-footer__logo {
+	padding: 0;
+	padding-bottom: 9px;
+
+	img {
+		width: 124px;
+		height: 10px;
+	}
+}
+
+.page-footer__info-list {
+	position: relative;
+
+	margin: 0;
+	padding: 0;
+	padding-bottom: 9px;
+
+	font-size: 12px;
+	line-height: 22px;
+	list-style: none;
+
+	a {
+		text-decoration: none;
+		font-weight: normal;
+		color: white;
+	}
+
+	&:nth-child(2) {
+
+		&::before {
+			content: "";
+
+			position: absolute;
+			top: 0;
+			right: 25px;
+
+			display: block;
+
+			width: 1px;
+			height: 66px;
+
+			background: @quartz;
+		}
+	}
+}
+
+.page-footer__item-title {
+	display: block;
+
+	padding-bottom: 9px;
+
+	.font-bold();
+	font-size: 12px;
+	line-height: 22px;
+	text-transform: uppercase;
+	color: white;
+}
+
+
+.page-footer__input-wrapper {
+	position: relative;
+
+	padding-bottom: 0;
+
+	&:nth-child(2) {
+		padding-bottom: 5px;
+	}
+
+	&::before {
+		content: "";
+
+		position: absolute;
+		top: 7px;
+		left: 2px;
+
+		display: block;
+
+		width: 1px;
+		height: 11px;
+		background: @silver-krayola;
+	}
+
+	input {
+		width: 100%;
+		padding-left: 6px;
+
+		.font-italic();
+		font-size: 10px;
+		line-height: 7px;
+
+		background: none;
+		border: none;
+		border-bottom: 1px solid white;
+		color: white;
+
+		&:focus {
+			outline: none;
+		}
+	}
+}
+
+.page-footer__form-btn {
+	.font-medium();
+	font-size: 10px;
+	line-height: 22px;
+	text-transform: uppercase;
+
+	color: white;
+	background: @footer-btn;
+	border: 1px solid white;
+}
+
+.page-footer__text {
+	position: relative;
+
+	padding-right: 0;
+	padding-bottom: 7px;
+	padding-left: 24px;
+
+	font-size: 12px;
+	line-height: 20px;
+
+	color: white;
+
+	&--phone::before {
+		.icon-left(4px, 0, 12px, 16px, -1061px);
+	}
+
+	&--adres::before {
+		.icon-left(4px, 0, 14px, 17px, -879px);
+	}
+
+	&--e-mail::before {
+		.icon-left(2px, 0, 14px, 14px, -391px);
+	}
+}
+
+.page-footer__up-btn {
+	position: absolute;
+	bottom: -1px;
+	left: 0;
+	right: 0;
+
+	display: block;
+	margin: 0 auto;
+
+	width: 42px;
+	height: 26px;
+
+	font-size: 0;
+	line-height: 0;
+	background: white;
+
+	&::before,
+	&::after {
+		content: "";
+
+		position: absolute;
+		top: 10px;
+		left: 0;
+		right: 0;
+
+		display: block;
+		width: 6px;
+		height: 6px;
+		margin: 0 auto;
+
+		border-bottom: 2px solid @granite-gray;
+		border-left: 2px solid @granite-gray;
+		transform: rotate(135deg);
+	}
+
+	&::before {
+		top: 15px;
+	}
+}
+
+.page-footer__copyright-container {
+	padding-right: 24.63%;
+	padding-left: 24.63%;
+}
+
+.page-footer__copyright-mark {
+	padding: 0;
+	padding-top: 6px;
+
+	font-size: 12px;
+	line-height: 22px;
+
+	color: @dim-gray;
+}
+
+.page-footer__copyright-text {
+	margin: 0;
+	padding-top: 6px;
+	padding-right: 4%;
+	padding-left: 4%;
+
+	font-size: 10px;
+	line-height: 14px;
+	text-align: center;
+
+	color: @dim-gray;
+}
+
+.page-footer__social {
+	padding: 0;
+	padding-top: 6px;
+}
+
+.page-footer__social-link {
+	display: block;
+
+	padding: 0;
+
+	font-size: 0;
+	line-height: 0;
+
+	background-image: url("../img/icons-sprite.png");
+	background-repeat: no-repeat;
+
+	&--twitter {
+		width: 15px;
+		height: 11px;
+		// margin-left: 63px;
+		margin-right: 24px;
+
+		background-position: -20px -1805px;
+	}
+
+	&--facebook {
+		width: 9px;
+		height: 11px;
+		margin-right: 24px;
+
+		background-position: -20px -550px;
+	}
+
+	&--linkedin {
+		width: 11px;
+		height: 11px;
+		background-position: -20px -652px;
+	}
+}

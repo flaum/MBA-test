@@ -4,27 +4,37 @@
 		<meta charset="utf-8">
 		<title>FASTFORWARD. HR менеджмент тур</title>
 		<meta name="viewport" content="width=device.width, initial-scale=1">
-		<link href="css/style.css" rel="stylesheet">
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/style.min.css" rel="stylesheet">
 	</head>
 	<body>
 		<header class="page-header">
-			<h1 class="page-header__title  visually-hidden">FASTFORWARD. HR менеджмент тур</h1>
+			<h1 class="page-header__title">FASTFORWARD. HR менеджмент тур</h1>
 			<ul class="page-header__list">
 				<li class="page-header__item-contacts">
 					<a class="page-header__e-mail-link" href="visits@fforward.biz">visits@fforward.biz</a>
 					<div class="page-header__social-block">
-						<a class="page-header__social-link" href="http://twitter.com"></a>
-						<a class="page-header__social-link" href="http://facebook.com"></a>
-						<a class="page-header__social-link" href="http://linked.in"></a>
+						<a class="page-header__social-link  page-header__social-link--twitter" href="http://twitter.com">Twitter</a>
+						<a class="page-header__social-link  page-header__social-link--facebook" href="http://facebook.com">Facebook</a>
+						<a class="page-header__social-link  page-header__social-link--linkedin" href="http://linked.in">LinkedIn</a>
 					</div>
 				</li>
 				<li class="page-header__item-language">
-					<a class="english" href="#">english</a>
-					<a class="russian" href="#">русский</a>
-					<a class="russian" href="#">українська</a>
+					<a class="page-header__lang-link" href="#">
+						<img src="img/icons/english-icon.png" width="22px" height="11px" alt="english">
+						English
+					</a>
+					<a class="page-header__lang-link  page-header__lang-link--active" href="#">
+						<img src="img/icons/russia-icon.png" width="16px" height="16px" alt="russian">
+						Русский
+					</a>
+					<a class="page-header__lang-link" href="#">
+						<img src="img/icons/ukraine-icon.png" width="16px" height="16px" alt="ukrainian">
+						Українська
+					</a>
 				</li>
 				<li class="page-header__item-logo">
-					<img src="http://placehold.it/222X40" width="222" height="40" alt="FastForvard-logo">
+					<img src="img/fastforward-logo.png" width="222" height="18" alt="FastForward-logo">
 				</li>
 				<li class="page-header__item-callback">
 					<span class="page-header__callback-text">Заказать обратный звонок</span>
@@ -33,24 +43,24 @@
 				</li>
 				<li class="page-header__item-advantages">
 					<span class="page-header__best-advantage">Номер 1 в Европе</span>
-					<span class="page-header__foundaition-year">Since 2006</span>
+					<span class="page-header__foundation-year">Since 2006</span>
 				</li>
 				<li class="page-header__item-navigation">
-					<ul class="main-nav">
-						<li class="main-nav__item  main-nav__item--main">
-							<a>Главная</a>
+					<ul class="page-header__nav-list">
+						<li class="page-header__nav-item  page-header__nav-item--main">
+							<a href="#">Главная</a>
 						</li>
-						<li class="main-nav__item  main-nav__item--about">
-							<a>О компании</a>
+						<li class="page-header__nav-item  page-header__nav-item--about">
+							<a href="#">О компании</a>
 						</li>
-						<li class="main-nav__item  main-nav__item--tours">
-							<a>Менеджмент-туры</a>
+						<li class="page-header__nav-item  page-header__nav-item--tours">
+							<a href="#">Менеджмент-туры</a>
 						</li>
-						<li class="main-nav__item  main-nav__item--comments">
-							<a>Комментарии</a>
+						<li class="page-header__nav-item  page-header__nav-item--comments">
+							<a href="#">Комментарии</a>
 						</li>
-						<li class="main-nav__item  main-nav__item--contacts">
-							<a>Контакты</a>
+						<li class="page-header__nav-item  page-header__nav-item--contacts">
+							<a href="#">Контакты</a>
 						</li>
 					</ul>
 				</li>
@@ -60,177 +70,209 @@
 			<section class="description">
 				<h1 class="description__title">HR менеджмент-тур</h1>
 				<h2 class="description__company-name">Google</h2>
-				<p>Вы посетите компанию Google &mdash; одну из самых инновационных ИТ-корпораций в мире. Созданная в 1998 году, она владеет самой популярной в мире поисковой системой.</p>
+				<p class="description__text">Вы посетите компанию Google &mdash; одну из самых инновационных ИТ-корпораций в мире. Созданная в 1998 году, она владеет самой популярной в мире поисковой системой.</p>
 				<a class="description__btn" href="#">Зарегистрироваться</a>
 			</section>
 			<article class="tour-info">
 				<div class="tour-info__icon">
-					<img src="http://placehold.it/35x40" width="35" height="40" alt="info-icon">
+					<span></span>
 				</div>
 				<h1 class="tour-info__title">Информация о туре</h1>
 				<p class="tour-info__text">Кремниевая долина &mdash; это то место, в котором рождается огромное количество <span>современных технологий!</span></p>
-				<ul class="tour-info__list">
-					<li class="tour-info__item  tour-info__item-topic">
-						<h2 class="tour-info__item-title">Тема визита</h2>
-						<p class="tour-info__item-text">Новые вызовы в управлении персоналом</p>
+				<ul class="tour-info__list  row">
+					<li class="tour-info__item  tour-info__item--topic  col-lg-4">
+						<div class="tour-info__item-border">
+							<div class="tour-info__item-wrapper">
+								<span class="tour-info__item-title">Тема визита</span>
+								<p class="tour-info__item-text">Новые вызовы в управлении персоналом</p>
+							</div>
+						<div>
 					</li>
-					<li class="tour-info__item  tour-info__item--date">
-						<h2 class="tour-info__item-title">Дата и место проведения</h2>
-						<p class="tour-info__item-text">США (Кремниевая долина и Лас-Вегас), <span>18</span> апреля - <span>24</span> апреля 2016</p>
+					<li class="tour-info__item  tour-info__item--date  col-lg-4">
+						<div class="tour-info__item-border">
+							<div class="tour-info__item-wrapper">
+								<span class="tour-info__item-title">Дата и место проведения</span>
+								<p class="tour-info__item-text">США (Кремниевая долина и Лас-Вегас), <span>18</span> апреля - <span>24</span> апреля 2016</p>
+							</div>
+						</div>
 					</li>
-					<li class="tour-info__item  tour-info__item-program">
-						<h2 class="tour-info__item-title">Вы посетите</h2>
-						<p class="tour-info__item-text">Google, Linkedin, Starbucks, Facebook, Square, Pay Pal, Stanford University, Zappos</p>
+					<li class="tour-info__item  tour-info__item--program  col-lg-4">
+						<div class="tour-info__item-border">
+							<div class="tour-info__item-wrapper">
+								<span class="tour-info__item-title">Вы посетите</span>
+								<p class="tour-info__item-text">Google, Linkedin, Starbucks, Facebook, Square, Pay Pal, Stanford University, Zappos</p>
+							</div>
+						</div>
 					</li>
 				</ul>
 				<a class="tour-info__btn" href="#">Зарегистрироваться</a>
 			</article>
 			<article class="reviews">
 				<h1 class="reviews__title">Отзывы о нас</h1>
-				<div class="reviews__icon">
-					<img src="http://placehold.it/30x30" width="30" height="30" alt="reviews-icon">
+				<div class="reviews__icon-wrapper">
+					<div class="reviews__icon">
+						<span></span>
+					</div>
 				</div>
 				<p class="reviews__text">Эти люди уже побывали в HR-менеджмент туре и с удовольствием поделяться с вами впечатлениями и знаниями, которые они получили, пребывая там.</p>
-				<ul class="reviews__list">
-					<li class="reviews__item">
-						<a class="reviews__item-nav  reviews__item-nav--prev" href="#">Предыдущий</a>
-						<div class="reviews__item-content">
-							<p class="reviews__item-text">На протяжении 13 лет компания "Фуд Плант ЛТД" успешно занимается импортом оборудования и комплектующих, а также расходных материалов для пищевой промышленности.</p>
-							<div class="reviews__author-photo">
-								<img src="http://placehold.it/50x50" width="50" height="50" alt="Олег Суворов">
-							</div>
-							<div class="reviews__athor-info">
-								<span class="reviews__author-name">Олег Суворов</span>
-								<span class="reviews__author-company">СЕО "Фуд плант"</span>
+				<ul class="reviews__list  row">
+					<li class="reviews__item  col-lg-6">
+						<div class="reviews__item-wrapper  row">
+							<a class="reviews__item-nav  reviews__item-nav--prev  col-xs-2" href="#">Предыдущий</a>
+							<div class="reviews__item-content  col-xs-10">
+								<p class="reviews__item-text">На протяжении 13 лет компания "Фуд Плант ЛТД" успешно занимается импортом оборудования и комплектующих, а также расходных материалов для пищевой промышленности.</p>
+								<div class="reviews__author-block">
+									<div class="reviews__author-photo">
+										<img src="img/suvorov-avatar.png" width="83" height="81" alt="Олег Суворов">
+									</div>
+									<div class="reviews__author-info">
+										<span class="reviews__author-name">Олег Суворов</span>
+										<span class="reviews__author-company">СЕО "Фуд плант"</span>
+									</div>
+								</div>
 							</div>
 						</div>
 					</li>
-					<li class="reviews__item">
-						<a class="reviews__item-nav  reviews__item-nav--next" href="#">Следующий</a>
-						<div class="reviews__item-content">
-							<p class="reviews__item-text">Компания "Мария" &mdash; российская компания-производитель мебели. Производство распологается в Саратове. В апреле 2011 года мебельная фабрика "Мария" стала лауреатом ежегодной Всеросийской премии "Предприятие года".</p>
-							<div class="reviews__author-photo">
-								<img src="http://placehold.it/50x50" width="50" height="50" alt="Олег Суворов">
+					<li class="reviews__item  col-lg-6">
+						<div class="reviews__item-wrapper  row">
+							<div class="reviews__item-content  col-xs-10">
+								<p class="reviews__item-text">Компания "Мария" &mdash; российская компания-производитель мебели. Производство распологается в Саратове. В апреле 2011 года мебельная фабрика "Мария" стала лауреатом ежегодной Всеросийской премии "Предприятие года".</p>
+								<div class="reviews__author-block">
+									<div class="reviews__author-photo">
+										<img src="img/teslenko-avatar.png" width="83" height="81" alt="Олег Суворов">
+									</div>
+									<div class="reviews__author-info">
+										<span class="reviews__author-name">Тесленко Владимир</span>
+										<span class="reviews__author-company">Директор по управлению персоналом Компания "Мария"</span>
+									</div>
+								</div>
 							</div>
-							<div class="reviews__athor-info">
-								<span class="reviews__author-name">Тесленко Владимир</span>
-								<span class="reviews__author-company">Директор по управлению персоналом Компания "Мария"</span>
-							</div>
+							<a class="reviews__item-nav  reviews__item-nav--next  col-xs-2" href="#">Следующий</a>
 						</div>
 					</li>
 				</ul>
 				<a class="reviews__all-btn" href="#">Посмотреть все отзывы</a>
 			</article>
 			<article class="companies">
-				<div class="companies__icon">
-					<img src="http://placehold.it/35x40" width="35" height="40" alt="info-icon">
-				</div>
-				<h1 class="companies__title">Компании, которые вы посетите</h1>
-				<p class="companies__text">Мы <span>профессионально</span> организовываем открытые и корпоративные визиты с целью получения <span>опыта, знаний и ценных бизнес-контактов.</span></p>
-				<div class="companies__description-block">
-					<div class="companies__company-info">
-						<div class="companies__company-logo">
-							<img src="http://placehold.it/200x50" width="200" height="50" alt="Google">
-						</div>
-						<span class="companies__company-activity">Крупнейшая поисковая система</span>
-						<p class="companies__company-text">Одна из самых инновационых ИТ-корпораций в мире. Созданная в 1998 году, она владеет самой популярной в мире поисковой системой.</p>
-						<a class="companies__company-btn" href="#">Скачать брошюру тура</a>
+				<div class="companies__wrapper">
+					<div class="companies__icon">
+						<span></span>
 					</div>
-					<div class="companies__photo-container">
-						<img src="http://placehold.it/500x400" width="500" height="400" alt="Google office">
-						<div class="companies__photo-nav-btns">
-							<a class="companies__photo-nav-btn  companies__photo-nav-btn--prev" href="#">Назад</a>
-							<a class="companies__photo-nav-btn  companies__photo-nav-btn--next" href="#">Вперед</a>
+					<h1 class="companies__title">Компании, которые вы посетите</h1>
+					<p class="companies__text">Мы <span>профессионально</span> организовываем открытые и корпоративные визиты с целью получения <span>опыта, знаний и ценных бизнес-контактов.</span></p>
+					<div class="companies__description-block">
+						<div class="companies__company-info">
+							<div class="companies__company-logo">
+								<img src="img/google-logo.png" width="154" height="48" alt="Google">
+							</div>
+							<span class="companies__company-activity">Крупнейшая поисковая система</span>
+							<p class="companies__company-text">Одна из самых инновационых ИТ&#8209;корпораций в мире. Созданная в 1998 году, она владеет самой популярной в мире поисковой системой.</p>
+							<a class="companies__company-btn" href="#">Скачать брошюру тура</a>
+						</div>
+						<div class="companies__photo-container">
+							<img src="img/google-building.jpg" width="446" height="365" alt="Google office">
+							<div class="companies__photo-nav-btns">
+								<a class="companies__photo-nav-btn  companies__photo-nav-btn--prev" href="#">Назад</a>
+								<a class="companies__photo-nav-btn  companies__photo-nav-btn--next" href="#">Вперед</a>
+							</div>
 						</div>
 					</div>
+					<ul class="companies__info-list">
+						<li class="companies__info-item">
+							<a class="companies__item-link" href="#">
+								<img src="img/program-download-icon.png" width="161" height="178" alt="Программа предыдущего тура">
+								<span>Скачать программу</span>
+							</a>
+						</li>
+						<li class="companies__info-item">
+							<a class="companies__item-link" href="#">
+								<img src="img/presentation-download-icon.png" width="161" height="178" alt="Презентация о турах">
+								<span>Скачать буклет</span>
+							</a>
+						</li>
+						<li class="companies__info-item">
+							<a class="companies__item-link" href="#">
+								<img src="img/about-download-icon.png" width="161" height="178" alt="О нас">
+								<span>Читать о нас</span>
+							</a>
+						</li>
+					</ul>
 				</div>
-				<ul class="companies__info-list">
-					<li class="companies__info-item">
-						<a class="companies__item-link" href="#">
-							<img src="http://placehold.it/100x100" width="100" height="100" alt="Программа предыдущего тура">
-							Скачать программу
-						</a>
-					</li>
-					<li class="companies__info-item">
-						<a class="companies__item-link" href="#">
-							<img src="http://placehold.it/100x100" width="100" height="100" alt="Презентация о турах">
-							Скачать буклет
-						</a>
-					</li>
-					<li class="companies__info-item">
-						<a class="companies__item-link" href="#">
-							<img src="http://placehold.it/100x100" width="100" height="100" alt="О нас">
-							Читать о нас
-						</a>
-					</li>
-				</ul>
 			</article>
 			<article class="registration">
 				<h1 class="registration__title">Он-лайн регистрация</h1>
-				<div class="registration__icon">
-					<img src="http://placehold.it/30x30" width="30" height="30" alt="reviews-icon">
+				<div class="registration__icon-wrapper">
+					<div class="registration__icon">
+						<span></span>
+					</div>
 				</div>
 				<p class="registration__text">Если у вас остались вопросы о туре, а также для онлайн регистрации, заполните данную форму, и мы с вами свяжемся.</p>
-				<div class="registraition__form-container">
-					<form class="registration__form" name="registration-form" action="http://skflaum@gmail.com" method="post">
-						<div class="registration__form-fields">
-							<label class="registration__form-field">
-								ФИО
-								<input type="text" name="full-name">
-							</label>
-							<label class="registration__form-field">
-								Телефон
-								<input type="tel" name="phone-number">
-							</label>
-							<label class="registration__form-field">
-								E-mail
-								<input type="email" name="e-mail">
-							</label>
-							<label class="registration__form-field">
-								Ваша компания
-								<input type="text" name="company-name">
-							</label>
+				<form class="registration__form" name="registration-form" action="php/form-self.php" method="post">
+					<div class="registration__form-fields">
+						<label class="registration__form-field">
+							ФИО
+							<input type="text" name="full-name">
+						</label>
+						<label class="registration__form-field">
+							Телефон
+							<input type="tel" name="phone-number">
+						</label>
+						<label class="registration__form-field">
+							E-mail
+							<input type="email" name="e-mail">
+						</label>
+						<label class="registration__form-field">
+							Ваша компания
+							<input type="text" name="company-name">
+						</label>
+					</div>
+					<div class="registration__advisor-container">
+						<div class="registration__advisor-photo">
+							<img src="img/alesya-avatar.png" width="114" height="114" alt="Фото Алеси Глущук">
 						</div>
-						<div class="registration__advisor-container">
-							<div class="registration__advisor-photo">
-								<img src="http://placehold.it/60x60" width="60" height="60" alt="Фото Алеси Глущук">
-							</div>
-							<span class="registration__advisor-text">"Этим вопросом займусь я лично!"</span>
-							<span class="registration__advisor-name">Алеся Глущук</span>
-							<span class="registration__advisor-position">Руководитель компании FastForvard</span>
-						</div>
-						<button class="registration__btn" type="submit">Зарегистрироваться</button>
-					</form>
+						<span class="registration__advisor-text">"Этим вопросом займусь я лично!"</span>
+						<span class="registration__advisor-name">Алеся Глущук</span>
+						<span class="registration__advisor-position">Руководитель компании FastForvard</span>
+					</div>
+					<button class="registration__btn" type="submit">Зарегистрироваться</button>
+				</form>
 				</div>
 			</article>
 			<article class="partners">
 				<h1 class="partners__title">Наши партнеры</h1>
-				<div class="partners__icon">
-					<img src="http://placehold.it/30x30" width="30" height="30" alt="reviews-icon">
+				<div class="partners__icon-wrapper">
+					<div class="partners__icon">
+						<span></span>
+					</div>
 				</div>
 				<ul class="partners__list">
 					<li class="partners__item">
 						<a class="partners__item-link" href="http://hh.ua">
+							<img src="img/hhua-logo.jpg" width="97" height="54" alt="HeadHunter.ua">
 							HeadHunter Ukraine
 						</a>
 					</li>
 					<li class="partners__item">
 						<a class="partners__item-link" href="#">
+							<img src="img/expert-logo.jpg" width="173" height="55" alt="Эксперты рынка труда">
 							Эксперты рынка труда
 						</a>
 					</li>
 					<li class="partners__item">
 						<a class="partners__item-link" href="#">
+							<img src="img/empire-logo.jpg" width="67" height="55" alt="Империя кадров">
 							Империя кадров
 						</a>
 					</li>
 					<li class="partners__item">
 						<a class="partners__item-link" href="#">
+							<img src="img/newz-logo.jpg" width="165" height="54" alt="Time of newz">
 							Time of Newz
 						</a>
 					</li>
 					<li class="partners__item">
 						<a class="partners__item-link" href="hh.ru">
+							<img src="img/hhru-logo.jpg" width="106" height="59" alt="HeadHunter.ru">
 							HeadHunter Russia
 						</a>
 					</li>
@@ -238,47 +280,80 @@
 			</article>
 		</main>
 		<footer class="page-footer">
-			<ul class="page-footer__list">
-				<li class="page-footer__item">
-					<div class="page-footer__logo">
-						<img src="http://placehold.it/222x40" width="222" height="40" alt="FastForvard-logo">
-					</div>
-					<ul class="page-footer__info-list">
-						<li class="page-footer__info-item">О компании</li>
-						<li class="page-footer__info-item">Инновации</li>
-						<li class="page-footer__info-item">iConference</li>
-						<li class="page-footer__info-item">Карта проезда</li>
-						<li class="page-footer__info-item">Партнеры</li>
-						<li class="page-footer__info-item">Контакты</li>
-					</ul>
-				</li>
-				<li class="page-footer__item">
-					<span class="page-footet__item-title">Подпишитесь на новости</span>
-					<form class="page-footer__form" name="news-form" action="skflaum@gmail.com" method="post">
-						<input type="text" name="name">
-						<input type="email" name="e-mail">
-						<button class="page-footer__form-btn" type="submit">Подписаться</button>
-					</form>
-				</li>
-				<li class="page-footer__item">
-					<span class="page-footer__item-title">Московский офис</span>
-					<span class="page-footer__text  page-footer__text--phone">7 499 705 10 79</span>
-					<span class="page-footer__text  page-footer__text--adress">Архангельский пер, дом. 7, строение 1, офис 5</span>
-				</li>
-				<li class="page-footer__item">
-					<span class="page-footer__item-title">Киевский офис</span>
-					<span class="page-footer__text  page-footer__text--phone">+380 44 221 41 10</span>
-					<span class="page-footer__text  page-footer__text--adress">ул. Б. Хмельницкого, 32, офис 43</span>
-					<span class="page-footer__text  page-footer__text--adress">visit@fforward.biz</span>
-				</li>
-			</ul>
-			<div class="page-footer__copyright-conteiner">
-				<span class="page-footer__copyright-mark">&copy; 2015 Fastforward</span>
-				<p class="page-footer__copyright-text">Воспроизведение материалов в любом виде разрешается только после согласования с правообладателем FastForvard<sup>тм</sup>, Менеджмент-тур<sup>тм</sup> являются зарегистрированными товарными знаками.</p>
-				<div class="page-footer__social">
-					<a class="page-header__social-link" href="http://twitter.com"></a>
-					<a class="page-header__social-link" href="http://facebook.com"></a>
-					<a class="page-header__social-link" href="http://linked.in"></a>
+			<div class="page-footer__list-wrapper">
+				<ul class="page-footer__list  row">
+					<li class="page-footer__item  page-footer__item--nav  col-lg-3">
+						<div class="page-footer__logo  col-xs-12">
+							<img src="img/fastforward-logo--footer.png" width="124" height="10" alt="FastForward-logo">
+						</div>
+						<ul class="page-footer__info-list  col-xs-6">
+							<li class="page-footer__info-item">
+								<a href="#">
+									О компании
+								</a>
+							</li>
+							<li class="page-footer__info-item">
+								<a href="#">
+									Инновации
+								</a>
+							</li>
+							<li class="page-footer__info-item">
+								<a href="#">
+									iConference
+								</a>
+							</li>
+						</ul>
+						<ul class="page-footer__info-list  col-xs-6">
+							<li class="page-footer__info-item">
+								<a href="#">
+									Карта проезда
+								</a>
+							</li>
+							<li class="page-footer__info-item">
+								<a href="#">
+									Партнеры
+								</a>
+							</li>
+							<li class="page-footer__info-item">
+								<a href="#">
+									Контакты
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li class="page-footer__item  page-footer__item--news  col-lg-3">
+						<span class="page-footer__item-title">Подпишитесь на новости</span>
+						<form class="page-footer__form" name="news-form" action="skflaum@gmail.com" method="post">
+							<div class="page-footer__input-wrapper">
+								<input type="text" name="name" placeholder="ваше имя">
+							</div>
+							<div class="page-footer__input-wrapper">
+								<input type="email" name="e-mail" placeholder="e-mail adress">
+							</div>
+							<button class="page-footer__form-btn  col-xs-12" type="submit">Подписаться</button>
+						</form>
+					</li>
+					<li class="page-footer__item  page-footer__item--moscow-office  col-lg-3">
+						<span class="page-footer__item-title">Московский офис</span>
+						<span class="page-footer__text  page-footer__text--phone  col-xs-12">7 499 705 10 79</span>
+						<span class="page-footer__text  page-footer__text--adres  col-xs-12">Архангельский пер, дом. 7, строение 1, офис 5</span>
+					</li>
+					<li class="page-footer__item  page-footer__item--kiev-office  col-lg-3">
+						<span class="page-footer__item-title">Киевский офис</span>
+						<span class="page-footer__text  page-footer__text--phone  col-xs-12">+380 44 221 41 10</span>
+						<span class="page-footer__text  page-footer__text--adres  col-xs-12">ул. Б. Хмельницкого, 32, офис 43</span>
+						<span class="page-footer__text  page-footer__text--e-mail  col-xs-12">visit@fforward.biz</span>
+					</li>
+				</ul>
+				<a class="page-footer__up-btn" href="#">Наверх</a>
+			</div>
+			<div class="page-footer__copyright-container  rows">
+				<span class="page-footer__copyright-mark  col-xs-2">&copy; 2015 Fastforward</span>
+				<p class="page-footer__copyright-text  col-xs-8">Воспроизведение материалов в любом виде разрешается только после согласования с правообладателем FastForvard<sup>тм</sup>, Менеджмент-тур<sup>тм</sup> являются зарегистрированными товарными знаками.</p>
+				<div class="page-footer__social  col-xs-2  rows">
+					<a class="page-footer__social-link  page-footer__social-link--twitter  col-xs-4" href="http://twitter.com">Twitter</a>
+					<a class="page-footer__social-link  page-footer__social-link--facebook  col-xs-4" href="http://facebook.com">Facebook</a>
+					<a class="page-footer__social-link  page-footer__social-link--linkedin  col-xs-4" href="http://linked.in">LinkedIn</a>
 				</div>
 			</div>
 		</footer>

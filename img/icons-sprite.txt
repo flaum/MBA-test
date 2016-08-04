@@ -1,0 +1,197 @@
+.sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-about-menu-icon {
+    width: 15px;
+    height: 17px;
+    background-position: -20px -20px;
+}
+
+.sprite-about-menu-icon--hover {
+    width: 15px;
+    height: 17px;
+    background-position: -20px -77px;
+}
+
+.sprite-companies-icon {
+    width: 41px;
+    height: 49px;
+    background-position: -20px -134px;
+}
+
+.sprite-contacts-menu-icon {
+    width: 21px;
+    height: 17px;
+    background-position: -20px -223px;
+}
+
+.sprite-contacts-menu-icon--hover {
+    width: 21px;
+    height: 17px;
+    background-position: -20px -280px;
+}
+
+.sprite-email-icon {
+    width: 17px;
+    height: 14px;
+    background-position: -20px -337px;
+}
+
+.sprite-email-icon--footer {
+    width: 14px;
+    height: 14px;
+    background-position: -20px -391px;
+}
+
+.sprite-english-icon {
+    width: 22px;
+    height: 13px;
+    background-position: -20px -445px;
+}
+
+.sprite-facebook-icon {
+    width: 6px;
+    height: 12px;
+    background-position: -20px -498px;
+}
+
+.sprite-facebook-icon--footer {
+    width: 9px;
+    height: 11px;
+    background-position: -20px -550px;
+}
+
+.sprite-linkedin-icon {
+    width: 11px;
+    height: 11px;
+    background-position: -20px -601px;
+}
+
+.sprite-linkedin-icon--footer {
+    width: 11px;
+    height: 11px;
+    background-position: -20px -652px;
+}
+
+.sprite-main-menu-icon {
+    width: 20px;
+    height: 18px;
+    background-position: -20px -703px;
+}
+
+.sprite-main-menu-icon--hover {
+    width: 20px;
+    height: 18px;
+    background-position: -20px -761px;
+}
+
+.sprite-mark-icon {
+    width: 12px;
+    height: 20px;
+    background-position: -20px -819px;
+}
+
+.sprite-mark-icon-footer {
+    width: 14px;
+    height: 17px;
+    background-position: -20px -879px;
+}
+
+.sprite-partners-icon {
+    width: 36px;
+    height: 26px;
+    background-position: -20px -936px;
+}
+
+.sprite-phone-icon {
+    width: 11px;
+    height: 19px;
+    background-position: -20px -1002px;
+}
+
+.sprite-phone-icon--footer {
+    width: 12px;
+    height: 16px;
+    background-position: -20px -1061px;
+}
+
+.sprite-program-icon {
+    width: 18px;
+    height: 15px;
+    background-position: -20px -1117px;
+}
+
+.sprite-registration-icon {
+    width: 35px;
+    height: 35px;
+    background-position: -20px -1172px;
+}
+
+.sprite-reviews-icon {
+    width: 33px;
+    height: 33px;
+    background-position: -20px -1247px;
+}
+
+.sprite-reviews-menu-icon {
+    width: 21px;
+    height: 21px;
+    background-position: -20px -1320px;
+}
+
+.sprite-reviews-menu-icon--hover {
+    width: 21px;
+    height: 21px;
+    background-position: -20px -1381px;
+}
+
+.sprite-russia-icon {
+    width: 16px;
+    height: 16px;
+    background-position: -20px -1442px;
+}
+
+.sprite-topic-icon {
+    width: 11px;
+    height: 17px;
+    background-position: -20px -1498px;
+}
+
+.sprite-tour-info-icon {
+    width: 31px;
+    height: 41px;
+    background-position: -20px -1555px;
+}
+
+.sprite-tours-menu-icon {
+    width: 32px;
+    height: 18px;
+    background-position: -20px -1636px;
+}
+
+.sprite-tours-menu-icon--hover {
+    width: 32px;
+    height: 18px;
+    background-position: -20px -1694px;
+}
+
+.sprite-twitter-icon {
+    width: 16px;
+    height: 13px;
+    background-position: -20px -1752px;
+}
+
+.sprite-twitter-icon--footer {
+    width: 15px;
+    height: 11px;
+    background-position: -20px -1805px;
+}
+
+.sprite-ukraine-icon {
+    width: 16px;
+    height: 16px;
+    background-position: -20px -1856px;
+}
