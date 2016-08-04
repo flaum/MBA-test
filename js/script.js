@@ -1,25 +1,71 @@
 var links;
-var regForm;
+var regForm = $(".registration__form");
 var subscriptForm;
 var inputs;
 var formData;
 
+// $(document).ready(function() {
+// 	regForm.validate({
+// 		rules: {
+// 			full-name: {
+// 				required: true,
+// 				minlength: 9
+// 			},
+//
+// 			phone-number: {
+// 				required: true,
+// 				number: true
+// 			},
+//
+// 			e-mail: {
+// 				required: true
+// 			},
+//
+// 			company-name: {
+// 				required: true
+// 			}
+// 		},
+//
+// 		messages: {
+// 			full-name: {
+// 				required: "Это поле обязательно для заполнения",
+// 				minlength: "ФИО должно быть не менее 9 символов"
+// 			},
+//
+// 			phone-number: {
+// 				required: "Это поле обязательно для заполнения",
+// 				number: "Введитеномер в числовом формате"
+// 			},
+//
+// 			e-mail: {
+// 				required: "Это поле обязательно для заполнения"
+// 			},
+//
+// 			company-name: {
+// 				required: "Это поле обязательно для заполнения"
+// 			}
+// 		}
+// 	};)
+// });
+
 $(function () {
 
-links = $("a");
-regForm = $(".registration__form");
-subscriptForm = $(".page-footer__form");
+	links = $("a");
+	regForm
+	subscriptForm = $(".page-footer__form");
 
-function preventLinks() {
-	for(var i = 0; i < links.length; i++) {
-		if($(links[i]).attr("href") == "#") {
-			$(links[i]).on("click", function(e) {
-				e = e || event
-				e.preventDefault();
-			});
+	function preventLinks() {
+		for(var i = 0; i < links.length; i++) {
+			if($(links[i]).attr("href") == "#") {
+				$(links[i]).on("click", function(e) {
+					e = e || event
+					e.preventDefault();
+				});
+			}
 		}
-	}
-};
+	};
+
+
 
 	regForm.submit(function (e) {
 		e = e || event;
@@ -39,7 +85,7 @@ function preventLinks() {
 				$(inputs[i]).css("border", "");
 				console.log("prevent");
 			}
-		}
+		};
 		e.preventDefault();
 		$.ajax({
 			type: "POST",
@@ -48,7 +94,7 @@ function preventLinks() {
 			success: function(msg) {
 				console.log("Vse udalos");
 			}
-		})
+		});
 	});
 
 	subscriptForm.submit(function() {

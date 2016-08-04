@@ -1,5 +1,5 @@
 <?
-		$to = "skflaum@gmail.com";
+		$to = "nb@mbastrategy.ru";
 		$subject = "Заявка на консультацию";
 		$message = "<html><head><title>'.$subject.'</title></head>";
 		$message .= "<body><p>ФИО: ".$_POST['full-name']."</p><p>Email: ".$_POST['e-mail']."</p><p>Телефон: ".$_POST['phone-number']."</p><p>Компания: ".$_POST['company-name']."</p></body></html>";
