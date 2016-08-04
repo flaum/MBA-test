@@ -1,4 +1,4 @@
-.btn() {
+.btn(@background: @orange-krayola, @color: white) {
 	display: flex;
 	justify-content: center;
 
@@ -8,12 +8,34 @@
 	line-height: 28px;
 	text-decoration: none;
 
-	color: white;
-	background: @orange-krayola;
+	color: @color;
+	background: @background;
 	border: 2px solid #ebecf3;
 	border-radius: 6px;
 	outline: 1px solid #f6b689;
 	outline-offset: -6px;
+
+	transition: color 0.3s ease,
+							background 0.3s ease,
+							box-shadow 0.1s ease;
+
+	&:hover {
+		text-decoration: none;
+		color: darken(@color, 18%);
+		background: lighten(@background, 10%);
+	}
+
+	&:active {
+		text-decoration: none;
+		color: @color;
+		background: @background;
+		box-shadow: inset 0 0 5px rgba(122, 122, 122, 0.6)
+	}
+
+	&:focus {
+		text-decoration: none;
+		color: @color;
+	}
 }
 
 .container-adaptive(@direction: column) {
@@ -21,7 +43,7 @@
 	flex-direction: @direction;
 
 	min-width: 1900px;
-	max-width: 2400px;
+	// max-width: 2400px;
 	margin: 0 auto;
 
 	@media @desktop-width {

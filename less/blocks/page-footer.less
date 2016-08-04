@@ -169,6 +169,21 @@
 	color: white;
 	background: @footer-btn;
 	border: 1px solid white;
+
+	transition: background 0.3s ease,
+							color 0.3s ease;
+
+	&:hover {
+		background: darken(@footer-btn, 15%);
+	}
+
+	&:active {
+		opacity: 0.5;
+	}
+
+	&:focus {
+		outline: none;
+	}
 }
 
 .page-footer__text {
@@ -211,6 +226,25 @@
 	font-size: 0;
 	line-height: 0;
 	background: white;
+	transition: opacity 0.3s ease,
+							background 0.3s ease;
+
+	&:hover {
+
+		&::before,
+		&::after {
+			border-color: darken(@granite-gray, 40%);
+		}
+	}
+
+	&:active {
+		opacity: 1;
+
+		&::before,
+		&::after {
+			border-color: lighten(@granite-gray, 60%);
+		}
+	}
 
 	&::before,
 	&::after {
@@ -229,6 +263,7 @@
 		border-bottom: 2px solid @granite-gray;
 		border-left: 2px solid @granite-gray;
 		transform: rotate(135deg);
+		transition: border-color 1.3s ease;
 	}
 
 	&::before {
