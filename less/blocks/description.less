@@ -34,9 +34,10 @@
 }
 
 .description__text {
-	width: 37%;
 	margin: 0;
 	padding-bottom: 33px;
+	padding-left: 31.5%;
+	padding-right: 31.5%;
 
 	font-size: 22px;
 	line-height: 25px;
@@ -59,4 +60,35 @@
 	border-radius: 2px;
 	outline: 1px solid #f6b689;
 	outline-offset: -6px;
+}
+
+@media @desktop-width {
+	.description__text {
+		padding-left: 15%;
+		padding-right: 15%;
+	}
+}
+
+@media @mobile-width {
+	.description {
+		padding-top: 0;
+		padding-bottom: 65px;
+	}
+
+	.description__title {
+		padding-top: 20px;
+		padding-bottom: 15px;
+
+		font-size: 30px;
+		line-height: 36px;
+		text-align: center;
+	}
+
+	.description__text {
+		font-size: 16px;
+		padding-right: @mobile-screen-padding;
+		padding-bottom: 55px;
+		padding-left: @mobile-screen-padding;
+
+	}
 }

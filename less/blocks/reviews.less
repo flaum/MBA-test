@@ -4,9 +4,9 @@
 	align-items: center;
 
 	padding-top: 20px;
-	padding-left: 24.63%;
+	padding-left: @big-screen-padding;
 	padding-bottom: 106px;
-	padding-right: 24.63%;
+	padding-right: @big-screen-padding;
 }
 
 .reviews__title {
@@ -196,4 +196,35 @@
 	.btn();
 	padding-left: 35px;
 	padding-right: 35px;
+}
+
+@media @desktop-width {
+	.reviews {
+		padding-left: @desktop-screen-padding;
+		padding-right: @desktop-screen-padding;
+	}
+}
+
+@media @tablet-width {
+	.reviews {
+		padding-left: @tablet-screen-padding;
+		padding-right: @tablet-screen-padding;
+	}
+
+	.reviews__list {
+		padding-bottom: 0;
+	}
+
+	.reviews__item-wrapper {
+		padding-bottom: 30px;
+	}
+}
+
+@media @mobile-width {
+	.reviews {
+		padding-right: @mobile-screen-padding;
+		padding-bottom: 65px;
+		padding-left: @mobile-screen-padding;
+	}
+
 }

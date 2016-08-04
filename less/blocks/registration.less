@@ -2,9 +2,9 @@
 	.container-adaptive;
 	align-items: center;
 
-	padding-left: 24.63%;
-	padding-right: 24.63%;
+	padding-right: @big-screen-padding;
 	padding-bottom: 60px;
+	padding-left: @big-screen-padding;
 }
 
 .registration__title {
@@ -168,4 +168,43 @@
 
 .registration__btn {
 	.btn();
+}
+
+@media @desktop-width {
+	.registration {
+		padding-right: @desktop-screen-padding;
+		padding-left: @desktop-screen-padding;
+	}
+}
+
+@media @tablet-width {
+	.registration {
+		padding-right: @tablet-screen-padding;
+		padding-left: @tablet-screen-padding;
+	}
+}
+
+@media @mobile-width {
+	.registration{
+		padding-right: @mobile-screen-padding;
+		padding-bottom: 35px;
+		padding-left: @mobile-screen-padding;
+	}
+
+	.registration__text {
+		padding: 0;
+	}
+
+	.registration__form-fields {
+		padding-bottom: 0;
+	}
+
+	.registration__form-field {
+		padding-right: 0;
+		padding-bottom: 5px;
+	}
+
+	.registration__advisor-container {
+		padding-bottom: 20px;
+	}
 }

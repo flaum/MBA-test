@@ -4,8 +4,8 @@
 	align-items: center;
 
 	padding-top: 57px;
-	padding-left: 24.63%;
-	padding-right: 24.63%;
+	padding-left: @big-screen-padding;
+	padding-right: @big-screen-padding;
 	padding-bottom: 33px;
 }
 
@@ -42,9 +42,10 @@
 }
 
 .tour-info__text {
-	width: 40%;
 	margin: 0;
+	padding-right: 30%;
 	padding-bottom: 47px;
+	padding-left: 30%;
 
 	font-size: 19px;
 	line-height: 22px;
@@ -139,4 +140,30 @@
 
 .tour-info__btn {
 	.btn();
+}
+
+@media @desktop-width {
+	.tour-info {
+		padding-left: @desktop-screen-padding;
+		padding-right: @desktop-screen-padding;
+	}
+
+	.tour-info__text {
+		padding-left: 15%;
+		padding-right: 15%;
+	}
+}
+
+@media @tablet-width {
+	.tour-info {
+		padding-right: @tablet-screen-padding;
+		padding-left: @tablet-screen-padding;
+	}
+}
+
+@media @mobile-width {
+	.tour-info {
+		padding-left: @mobile-screen-padding;
+		padding-right: @mobile-screen-padding
+	}
 }

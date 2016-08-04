@@ -1,9 +1,9 @@
 .partners {
 	.container-adaptive();
 
-	padding-right: 24.63%;
+	padding-right: @big-screen-padding;
 	padding-bottom: 77px;
-	padding-left: 24.63%;
+	padding-left: @big-screen-padding;
 }
 
 .partners__title {
@@ -102,5 +102,38 @@
 
 	&:nth-child(3) {
 		padding-right: 30px;
+	}
+}
+
+@media @desktop-width {
+	.partners {
+		padding-right: @desktop-screen-padding;
+		padding-left: @desktop-screen-padding;
+	}
+}
+
+@media @tablet-width {
+	.partners {
+		padding-right: @tablet-screen-padding;
+		padding-left: @tablet-screen-padding;
+	}
+}
+
+@media @mobile-width {
+	.partners {
+		padding-right: @mobile-screen-padding;
+		padding-bottom: 0;
+		padding-left: @mobile-screen-padding;
+	}
+
+	.partners__list {
+		flex-wrap: wrap;
+		justify-content: center;
+
+		padding: 0;
+	}
+
+	.partners__item {
+		padding-bottom: 30px;
 	}
 }

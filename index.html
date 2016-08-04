@@ -22,15 +22,15 @@
 				<li class="page-header__item-language">
 					<a class="page-header__lang-link" href="#">
 						<img src="img/icons/english-icon.png" width="22px" height="11px" alt="english">
-						English
-					</a>
-					<a class="page-header__lang-link  page-header__lang-link--active" href="#">
-						<img src="img/icons/russia-icon.png" width="16px" height="16px" alt="russian">
-						Русский
+						<span>English</span>
 					</a>
 					<a class="page-header__lang-link" href="#">
+						<img src="img/icons/russia-icon.png" width="16px" height="16px" alt="russian">
+						<span>Русский</span>
+					</a>
+					<a class="page-header__lang-link  page-header__lang-link--active" href="#">
 						<img src="img/icons/ukraine-icon.png" width="16px" height="16px" alt="ukrainian">
-						Українська
+						<span>Українська</span>
 					</a>
 				</li>
 				<li class="page-header__item-logo">
@@ -170,7 +170,10 @@
 							<a class="companies__company-btn" href="#">Скачать брошюру тура</a>
 						</div>
 						<div class="companies__photo-container">
-							<img src="img/google-building.jpg" width="446" height="365" alt="Google office">
+							<picture>
+								<source media="(max-width: 767px)" srcset="img/google-building@mobile.jpg">
+								<img src="img/google-building.jpg" width="446" height="365" alt="Google office">
+							</picture>
 							<div class="companies__photo-nav-btns">
 								<a class="companies__photo-nav-btn  companies__photo-nav-btn--prev" href="#">Назад</a>
 								<a class="companies__photo-nav-btn  companies__photo-nav-btn--next" href="#">Вперед</a>

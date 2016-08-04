@@ -1,6 +1,5 @@
 .page-footer {
 	.container-adaptive();
-
 }
 
 .page-footer__list-wrapper {
@@ -10,8 +9,8 @@
 .page-footer__list {
 	margin: 0;
 	padding: 0;
-	padding-right: 24.63%;
-	padding-left: 24.63%;
+	padding-right: @big-screen-padding;
+	padding-left: @big-screen-padding;
 
 	list-style: none;
 	background: @little-blue-gray url("../img/map-background.png") no-repeat 50% top;
@@ -238,8 +237,8 @@
 }
 
 .page-footer__copyright-container {
-	padding-right: 24.63%;
-	padding-left: 24.63%;
+	padding-right: @big-screen-padding;
+	padding-left: @big-screen-padding;
 }
 
 .page-footer__copyright-mark {
@@ -302,5 +301,125 @@
 		width: 11px;
 		height: 11px;
 		background-position: -20px -652px;
+	}
+}
+
+@media @desktop-width {
+	.page-footer__list {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+
+		padding-right: @desktop-screen-padding;
+		padding-left: @desktop-screen-padding;
+	}
+
+	.page-footer__item {
+		width: 248px;
+	}
+
+	.page-footer__copyright-container {
+		padding-right: @desktop-screen-padding;
+		padding-left: @desktop-screen-padding;
+	}
+}
+
+@media @tablet-width {
+	.page-footer__list {
+		flex-wrap: wrap;
+
+		padding-right: @tablet-screen-padding;
+		padding-left: @tablet-screen-padding
+	}
+
+	.page-footer__item {
+		width: 50%;
+		padding-left: 0;
+		padding-right: 0;
+
+		&--news {
+			padding-left: 56px;
+		}
+
+		&--moscow-office::before {
+			display: none;
+		}
+
+		&--kiev-office {
+			padding-left: 56px;
+		}
+	}
+
+	.page-footer__info-list:nth-child(2)::before {
+		right: 45px;
+	}
+
+	.page-footer__copyright-container {
+		padding-right: @tablet-screen-padding;
+		padding-left: @tablet-screen-padding;
+	}
+}
+
+@media @mobile-width {
+	.page-footer__list {
+		justify-content: center;
+
+		padding-right: @mobile-screen-padding;
+		padding-left: @mobile-screen-padding;
+	}
+
+	.page-footer__item {
+		width: auto;
+
+		&--news {
+			padding-left: 0;
+		}
+
+		&--moscow-office {
+			width: 100%;
+			padding-left: 10%;
+			padding-bottom: 10px;
+			padding-right: 10%;
+		}
+
+		&--kiev-office {
+			width: 100%;
+			padding-top: 0;
+			padding-left: 10%;
+			padding-bottom: 24px;
+			padding-right: 10%;
+		}
+	}
+
+	.page-footer__logo {
+		text-align: center;
+	}
+
+	.page-footer__info-list {
+		padding-left: 13%;
+
+		&:nth-child(2)::before {
+			right: 0;
+		}
+	}
+
+	.page-footer__copyright-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.page-footer__copyright-mark {
+		width: auto;
+	}
+
+	.page-footer__copyright-text {
+		width: auto;
+	}
+
+	.page-footer__social {
+		width: auto;
+		padding-top: 10px;
+		padding-bottom: 18px;
 	}
 }

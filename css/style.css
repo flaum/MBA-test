@@ -33,8 +33,8 @@ body {
 .description {
   display: flex;
   flex-direction: column;
-  min-width: 320px;
-  max-width: 767px;
+  min-width: 1900px;
+  max-width: 2400px;
   margin: 0 auto;
   align-items: center;
   padding-top: 70px;
@@ -61,9 +61,10 @@ body {
   text-shadow: 3px 4px 7px rgba(29, 25, 25, 0.79);
 }
 .description__text {
-  width: 37%;
   margin: 0;
   padding-bottom: 33px;
+  padding-left: 31.5%;
+  padding-right: 31.5%;
   font-size: 22px;
   line-height: 25px;
   text-align: center;
@@ -85,8 +86,8 @@ body {
 .companies {
   display: flex;
   flex-direction: column;
-  min-width: 320px;
-  max-width: 767px;
+  min-width: 1900px;
+  max-width: 2400px;
   margin: 0 auto;
   padding-top: 1px;
   background: linear-gradient(to left, #dfd2ce 0%, #df4444 50%, #dfd2ce 100%);
@@ -335,8 +336,8 @@ body {
 .page-header {
   display: flex;
   flex-direction: column;
-  min-width: 320px;
-  max-width: 767px;
+  min-width: 1900px;
+  max-width: 2400px;
   margin: 0 auto;
 }
 .page-header__title {
@@ -440,24 +441,10 @@ body {
 }
 .page-header__lang-link {
   display: none;
-  background: #36393c;
-}
-.page-header__lang-link--eng::after {
-  content: "";
-  position: absolute;
-  top: 6px;
-  left: 20px;
-  display: flex;
-  width: 22px;
-  height: 13px;
-  background: url("../img/icons-sprite.png") no-repeat -20px -445px;
-}
-.page-header__lang-link--active {
-  position: relative;
-  display: flex;
   flex-grow: 1;
   justify-content: flex-start;
-  align-items: center;
+  -ms-grid-row-align: center;
+      align-items: center;
   order: 0;
   padding-right: 20px;
   padding-left: 40px;
@@ -465,10 +452,15 @@ body {
   text-decoration: none;
   text-transform: lowercase;
   box-sizing: content-box;
+  background: #36393c;
 }
-.page-header__lang-link--active img {
+.page-header__lang-link img {
   padding-right: 10px;
   box-sizing: content-box;
+}
+.page-header__lang-link--active {
+  position: relative;
+  display: flex;
 }
 .page-header__lang-link--active::before {
   content: "";
@@ -506,7 +498,7 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 48.74%;
+  width: auto;
   padding-right: 24.63%;
   font-family: "Roboto Medium", Arial, sans-serif;
 }
@@ -694,8 +686,8 @@ body {
 .page-footer {
   display: flex;
   flex-direction: column;
-  min-width: 320px;
-  max-width: 767px;
+  min-width: 1900px;
+  max-width: 2400px;
   margin: 0 auto;
 }
 .page-footer__list-wrapper {
@@ -946,8 +938,8 @@ body {
 .partners {
   display: flex;
   flex-direction: column;
-  min-width: 320px;
-  max-width: 767px;
+  min-width: 1900px;
+  max-width: 2400px;
   margin: 0 auto;
   padding-right: 24.63%;
   padding-bottom: 77px;
@@ -1036,13 +1028,13 @@ body {
 .registration {
   display: flex;
   flex-direction: column;
-  min-width: 320px;
-  max-width: 767px;
+  min-width: 1900px;
+  max-width: 2400px;
   margin: 0 auto;
   align-items: center;
-  padding-left: 24.63%;
   padding-right: 24.63%;
   padding-bottom: 60px;
+  padding-left: 24.63%;
 }
 .registration__title {
   position: absolute;
@@ -1184,8 +1176,8 @@ body {
 .reviews {
   display: flex;
   flex-direction: column;
-  min-width: 320px;
-  max-width: 767px;
+  min-width: 1900px;
+  max-width: 2400px;
   margin: 0 auto;
   align-items: center;
   padding-top: 20px;
@@ -1351,8 +1343,8 @@ body {
 .tour-info {
   display: flex;
   flex-direction: column;
-  min-width: 320px;
-  max-width: 767px;
+  min-width: 1900px;
+  max-width: 2400px;
   margin: 0 auto;
   align-items: center;
   padding-top: 57px;
@@ -1386,9 +1378,10 @@ body {
   color: #df4444;
 }
 .tour-info__text {
-  width: 40%;
   margin: 0;
+  padding-right: 30%;
   padding-bottom: 47px;
+  padding-left: 30%;
   font-size: 19px;
   line-height: 22px;
   text-align: center;
@@ -1492,71 +1485,534 @@ body {
   outline: 1px solid #f6b689;
   outline-offset: -6px;
 }
-@media (min-width: 768px) {
+@media (max-width: 1899px) {
   .description {
-    min-width: 768px;
-    max-width: 1200px;
+    min-width: 1200px;
+    max-width: 1900px;
+  }
+  .description__text {
+    padding-left: 15%;
+    padding-right: 15%;
   }
   .companies {
-    min-width: 768px;
-    max-width: 1200px;
+    min-width: 1200px;
+    max-width: 1900px;
+  }
+  .companies__text {
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+  .companies__description-block {
+    flex-direction: column;
+  }
+  .companies__company-info {
+    width: 40%;
+    border-right: 1px solid #c7c4c4;
+    border-bottom: 11px solid #ffe7af;
+    border-top-right-radius: 7px;
+    border-bottom-left-radius: 0;
+    box-shadow: -5px 0 10px rgba(198, 189, 186, 0.17);
+  }
+  .companies__company-text {
+    padding-bottom: 25px;
+  }
+  .companies__photo-container {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 7px;
+  }
+  .companies__info-item {
+    padding-right: 9%;
   }
   .page-header {
-    min-width: 768px;
-    max-width: 1200px;
+    min-width: 1200px;
+    max-width: 1900px;
+  }
+  .page-header__item-contacts {
+    width: 72%;
+    flex-grow: 1;
+    padding-left: 9%;
+  }
+  .page-header__item-language {
+    flex-grow: 0;
+    padding-right: 9%;
+  }
+  .page-header__lang-link {
+    padding-left: 40px;
+    padding-right: 50px;
+  }
+  .page-header__lang-link::before {
+    right: -20px;
+  }
+  .page-header__item-logo {
+    padding-left: 9%;
+  }
+  .page-header__item-callback {
+    width: auto;
+    padding-right: 9%;
+  }
+  .page-header__item-advantages {
+    padding-left: 9%;
+  }
+  .page-header__item-navigation {
+    width: 69%;
+    padding-right: 9%;
+  }
+  .page-header__nav-list::before {
+    left: -20px;
   }
   .page-footer {
-    min-width: 768px;
-    max-width: 1200px;
+    min-width: 1200px;
+    max-width: 1900px;
+  }
+  .page-footer__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 9%;
+    padding-left: 9%;
+  }
+  .page-footer__item {
+    width: 248px;
+  }
+  .page-footer__copyright-container {
+    padding-right: 9%;
+    padding-left: 9%;
   }
   .partners {
-    min-width: 768px;
-    max-width: 1200px;
+    min-width: 1200px;
+    max-width: 1900px;
+  }
+  .partners {
+    padding-right: 9%;
+    padding-left: 9%;
   }
   .registration {
-    min-width: 768px;
-    max-width: 1200px;
+    min-width: 1200px;
+    max-width: 1900px;
+  }
+  .registration {
+    padding-right: 9%;
+    padding-left: 9%;
   }
   .reviews {
-    min-width: 768px;
-    max-width: 1200px;
+    min-width: 1200px;
+    max-width: 1900px;
+  }
+  .reviews {
+    padding-left: 9%;
+    padding-right: 9%;
   }
   .tour-info {
-    min-width: 768px;
-    max-width: 1200px;
+    min-width: 1200px;
+    max-width: 1900px;
+  }
+  .tour-info {
+    padding-left: 9%;
+    padding-right: 9%;
+  }
+  .tour-info__text {
+    padding-left: 15%;
+    padding-right: 15%;
   }
 }
-@media (min-width: 1200px) {
+@media (max-width: 1199px) {
   .description {
-    min-width: 1200px;
-    max-width: 2400px;
+    min-width: 768px;
+    max-width: 1200px;
   }
   .companies {
-    min-width: 1200px;
-    max-width: 2400px;
+    min-width: 768px;
+    max-width: 1200px;
   }
   .page-header {
-    min-width: 1200px;
-    max-width: 2400px;
+    min-width: 768px;
+    max-width: 1200px;
+  }
+  .page-header__item-contacts {
+    width: 70%;
+    flex-grow: 1;
+    padding-left: 4%;
+  }
+  .page-header__item-language {
+    padding-right: 0;
+  }
+  .page-header__item-logo {
+    width: 50%;
+    flex-grow: 1;
+    padding-left: 4%;
+    padding-right: 5px;
+  }
+  .page-header__item-callback {
+    padding-top: 18px;
+    padding-right: 4%;
+  }
+  .page-header__callback-phone:last-child {
+    display: none;
+  }
+  .page-header__item-advantages {
+    padding-left: 4%;
+  }
+  .page-header__item-navigation {
+    width: 100%;
+    padding-right: 0;
+  }
+  .page-header__nav-list {
+    justify-content: space-between;
+    padding-right: 4%;
+    padding-left: 4%;
   }
   .page-footer {
-    min-width: 1200px;
-    max-width: 2400px;
+    min-width: 768px;
+    max-width: 1200px;
+  }
+  .page-footer__list {
+    flex-wrap: wrap;
+    padding-right: 4%;
+    padding-left: 4%;
+  }
+  .page-footer__item {
+    width: 50%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .page-footer__item--news {
+    padding-left: 56px;
+  }
+  .page-footer__item--moscow-office::before {
+    display: none;
+  }
+  .page-footer__item--kiev-office {
+    padding-left: 56px;
+  }
+  .page-footer__info-list:nth-child(2)::before {
+    right: 45px;
+  }
+  .page-footer__copyright-container {
+    padding-right: 4%;
+    padding-left: 4%;
   }
   .partners {
-    min-width: 1200px;
-    max-width: 2400px;
+    min-width: 768px;
+    max-width: 1200px;
+  }
+  .partners {
+    padding-right: 4%;
+    padding-left: 4%;
   }
   .registration {
-    min-width: 1200px;
-    max-width: 2400px;
+    min-width: 768px;
+    max-width: 1200px;
+  }
+  .registration {
+    padding-right: 4%;
+    padding-left: 4%;
   }
   .reviews {
-    min-width: 1200px;
-    max-width: 2400px;
+    min-width: 768px;
+    max-width: 1200px;
+  }
+  .reviews {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+  .reviews__list {
+    padding-bottom: 0;
+  }
+  .reviews__item-wrapper {
+    padding-bottom: 30px;
   }
   .tour-info {
-    min-width: 1200px;
-    max-width: 2400px;
+    min-width: 768px;
+    max-width: 1200px;
+  }
+  .tour-info {
+    padding-right: 4%;
+    padding-left: 4%;
+  }
+}
+@media (max-width: 767px) {
+  .description {
+    min-width: 320px;
+    max-width: 768px;
+  }
+  .description {
+    padding-top: 0;
+    padding-bottom: 65px;
+  }
+  .description__title {
+    padding-top: 20px;
+    padding-bottom: 15px;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+  }
+  .description__text {
+    font-size: 16px;
+    padding-right: 4%;
+    padding-bottom: 55px;
+    padding-left: 4%;
+  }
+  .companies {
+    min-width: 320px;
+    max-width: 768px;
+  }
+  .companies__wrapper {
+    padding-top: 55px;
+    padding-right: 4%;
+    padding-bottom: 0;
+    padding-left: 4%;
+  }
+  .companies__title {
+    line-height: 36px;
+    text-align: center;
+  }
+  .companies__text {
+    padding: 0;
+    padding-bottom: 30px;
+  }
+  .companies__description-block {
+    padding-bottom: 55px;
+  }
+  .companies__company-info {
+    width: 85%;
+    flex-direction: column;
+    -ms-grid-row-align: center;
+    align-items: center;
+    padding: 10px;
+  }
+  .companies__company-logo {
+    padding-bottom: 0;
+  }
+  .companies__company-text {
+    text-align: center;
+  }
+  .companies__photo-container img {
+    width: 300px;
+  }
+  .companies__info-list {
+    flex-direction: column;
+  }
+  .companies__info-item {
+    padding-bottom: 55px;
+    padding-right: 0;
+  }
+  .companies__info-item:last-child {
+    padding-bottom: 25px;
+  }
+  .companies__info-item::after {
+    content: "";
+    position: absolute;
+    bottom: 20px;
+    left: 81px;
+    z-index: 1;
+    display: block;
+    width: 1px;
+    height: 185px;
+    border-left: 1px dashed #a2a2a2;
+  }
+  .companies__item-link {
+    padding-bottom: 3px;
+  }
+  .page-header {
+    min-width: 320px;
+    max-width: 768px;
+  }
+  .page-header {
+    padding-bottom: 0;
+  }
+  .page-header__list {
+    flex-direction: column;
+  }
+  .page-header__item-contacts {
+    order: 0;
+    width: auto;
+    padding-left: 4%;
+  }
+  .page-header__e-mail-link {
+    flex-grow: 1;
+    display: flex;
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+  .page-header__e-mail-link::before {
+    top: 12px;
+  }
+  .page-header__social-link {
+    display: block;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    box-sizing: content-box;
+  }
+  .page-header__social-link--twitter::before {
+    top: 15px;
+  }
+  .page-header__social-link--facebook::before {
+    top: 16px;
+  }
+  .page-header__social-link--linkedin::before {
+    top: 16px;
+  }
+  .page-header__item-language {
+    order: -1;
+  }
+  .page-header__lang-link--active {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 4%;
+    padding-left: 4%;
+  }
+  .page-header__lang-link--active::after {
+    top: 18px;
+  }
+  .page-header__item-logo {
+    order: 1;
+    width: auto;
+    text-align: center;
+    padding: 0;
+    padding-top: 18px;
+    padding-bottom: 5px;
+    padding-right: 4%;
+    padding-left: 4%;
+  }
+  .page-header__item-callback {
+    order: 3;
+    justify-content: center;
+    padding: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .page-header__item-advantages {
+    order: 2;
+    justify-content: center;
+    -ms-grid-row-align: baseline;
+    align-items: baseline;
+  }
+  .page-header__best-advantage {
+    padding-right: 12px;
+  }
+  .page-header__item-navigation {
+    order: 3;
+  }
+  .page-header__nav-list {
+    flex-wrap: wrap;
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+  .page-header__nav-item {
+    flex-grow: 1;
+  }
+  .page-header__nav-item a {
+    padding-right: 20px;
+  }
+  .page-footer {
+    min-width: 320px;
+    max-width: 768px;
+  }
+  .page-footer__list {
+    justify-content: center;
+    padding-right: 4%;
+    padding-left: 4%;
+  }
+  .page-footer__item {
+    width: auto;
+  }
+  .page-footer__item--news {
+    padding-left: 0;
+  }
+  .page-footer__item--moscow-office {
+    width: 100%;
+    padding-left: 10%;
+    padding-bottom: 10px;
+    padding-right: 10%;
+  }
+  .page-footer__item--kiev-office {
+    width: 100%;
+    padding-top: 0;
+    padding-left: 10%;
+    padding-bottom: 24px;
+    padding-right: 10%;
+  }
+  .page-footer__logo {
+    text-align: center;
+  }
+  .page-footer__info-list {
+    padding-left: 13%;
+  }
+  .page-footer__info-list:nth-child(2)::before {
+    right: 0;
+  }
+  .page-footer__copyright-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .page-footer__copyright-mark {
+    width: auto;
+  }
+  .page-footer__copyright-text {
+    width: auto;
+  }
+  .page-footer__social {
+    width: auto;
+    padding-top: 10px;
+    padding-bottom: 18px;
+  }
+  .partners {
+    min-width: 320px;
+    max-width: 768px;
+  }
+  .partners {
+    padding-right: 4%;
+    padding-bottom: 0;
+    padding-left: 4%;
+  }
+  .partners__list {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+  }
+  .partners__item {
+    padding-bottom: 30px;
+  }
+  .registration {
+    min-width: 320px;
+    max-width: 768px;
+  }
+  .registration {
+    padding-right: 4%;
+    padding-bottom: 35px;
+    padding-left: 4%;
+  }
+  .registration__text {
+    padding: 0;
+  }
+  .registration__form-fields {
+    padding-bottom: 0;
+  }
+  .registration__form-field {
+    padding-right: 0;
+    padding-bottom: 5px;
+  }
+  .registration__advisor-container {
+    padding-bottom: 20px;
+  }
+  .reviews {
+    min-width: 320px;
+    max-width: 768px;
+  }
+  .reviews {
+    padding-right: 4%;
+    padding-bottom: 65px;
+    padding-left: 4%;
+  }
+  .tour-info {
+    min-width: 320px;
+    max-width: 768px;
+  }
+  .tour-info {
+    padding-left: 4%;
+    padding-right: 4%;
   }
 }
